@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: aks
-        image: ginnfeng/aksexample:latest
+        image: aksacr001.azurecr.io/ginnfeng/aksexample:latest
         imagePullPolicy: IfNotPresent
       restartPolicy: Always
   selector:
