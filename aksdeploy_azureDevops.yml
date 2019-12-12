@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: aks
-        image: $(Build.Repository.Name):$(Build.BuildId)
+        image: #{Build.Repository.Name}#::latest
         imagePullPolicy: IfNotPresent
       restartPolicy: Always
   selector:
