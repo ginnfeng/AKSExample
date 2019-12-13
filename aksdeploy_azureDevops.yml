@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: aks
-        image: aksacr001.azurecr.io/#(Build.Repository.Name)#:latest
+        image: #{Build.Repository.Name}#:latest
         imagePullPolicy: IfNotPresent
       restartPolicy: Always
   selector:
