@@ -1,0 +1,75 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "resourceName": {
+            "value": "AKSDemo"
+        },
+        "location": {
+            "value": "southeastasia"
+        },
+        "dnsPrefix": {
+            "value": "AKSDemo-dns"
+        },
+        "agentCount": {
+            "value": 1
+        },
+        "agentVMSize": {
+            "value": "Standard_B2s"
+        },
+        "servicePrincipalClientId": {
+            "value": null
+        },
+        "servicePrincipalClientSecret": {
+            "value": null
+        },
+        "kubernetesVersion": {
+            "value": "1.14.8"
+        },
+        "networkPlugin": {
+            "value": "azure"
+        },
+        "enableRBAC": {
+            "value": true
+        },
+        "aadSessionKey": {
+            "value": null
+        },
+        "enableHttpApplicationRouting": {
+            "value": false
+        },
+        "vmssNodePool": {
+            "value": true
+        },
+        "vnetSubnetID": {
+            "value": "/subscriptions/be930fed-067e-45a9-9c02-199e17ba0987/resourceGroups/AKSDemo/providers/Microsoft.Network/virtualNetworks/AKSDemo-vnet/subnets/default"
+        },
+        "serviceCidr": {
+            "value": "10.0.0.0/16"
+        },
+        "dnsServiceIP": {
+            "value": "10.0.0.10"
+        },
+        "dockerBridgeCidr": {
+            "value": "172.17.0.1/16"
+        },
+        "principalId": {
+            "value": "d7d04e44-7f43-40fe-a75b-14b39d9df1e5"
+        },
+        "workspaceName": {
+            "value": "DefaultWorkspace-be930fed-067e-45a9-9c02-199e17ba0987-SEA"
+        },
+        "omsWorkspaceId": {
+            "value": "/subscriptions/be930fed-067e-45a9-9c02-199e17ba0987/resourceGroups/DefaultResourceGroup-SEA/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-be930fed-067e-45a9-9c02-199e17ba0987-SEA"
+        },
+        "workspaceRegion": {
+            "value": "southeastasia"
+        },
+        "aciVnetSubnetName": {
+            "value": "virtual-node-aci"
+        },
+        "aciConnectorLinuxEnabled": {
+            "value": true
+        }
+    }
+}
