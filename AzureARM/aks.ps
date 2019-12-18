@@ -1,0 +1,11 @@
+$version=(az aks get-versions -l "SoutheastAsia" --query 'orchestrators[-1].orchestratorVersion' -o tsv)
+
+az group create --name AKSRG --location "SoutheastAsia"
+
+az aks create --resource-group AKSRG --name aksmohamedradwan --enable-addons monitoring --kubernetes-version $version --generate-ssh-keys --location "SoutheastAsia"
+az acr create --resource-group AKSRG --name acrmohamedradwan --sku Standard --location "SoutheastAsia"
+$CLIENT_ID=(az aks show --resource-group AKSRG --name aksmohamedradwan --query "servicePrincipalProfile.clientId" --output tsv)
+
+$ACR_ID=(az acr show --name acrmohamedradwan --resource-group AKSRG --query "id" --output tsv)
+
+az role assignment create --assignee $CLIENT_ID --role acrpull --scope $ACR_ID
