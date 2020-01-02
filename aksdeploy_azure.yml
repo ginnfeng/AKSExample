@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: aks
-        image: aksacr001.azurecr.io/aks/v1:latest
+        image: acrdemo99.azurecr.io/aks/v1:latest
         imagePullPolicy: IfNotPresent
       restartPolicy: Always
   selector:
