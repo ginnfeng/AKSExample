@@ -7,6 +7,7 @@ $appId="e18ad3c7-4d5b-4586-bdbb-8c7ca12b60cf"
 $password="bb880747-a178-43f2-b7d1-745250365176"
 
 
+
 #Create ACR Server
 az group create --name $grpName --location $location
 az acr create --resource-group $grpName --name $acrServer --sku Standard
