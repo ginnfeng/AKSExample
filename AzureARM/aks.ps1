@@ -8,6 +8,7 @@ $password="bb880747-a178-43f2-b7d1-745250365176"
 
 
 
+
 #Create ACR Server
 az group create --name $grpName --location $location
 az acr create --resource-group $grpName --name $acrServer --sku Standard
